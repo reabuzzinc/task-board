@@ -2,7 +2,15 @@
 
 ## Project Overview
 
-This is a task board application. Update this section as the project takes shape.
+React-based task board application built with Vite.
+
+**Features:**
+- Add tasks via text input (Enter key or button)
+- Toggle completion with checkboxes
+- Delete tasks
+- Completed tasks displayed in gray with strikethrough
+
+**Stack:** React 19, Vite, CSS (no UI library)
 
 ---
 
@@ -25,18 +33,12 @@ Rules:
 - Write commit messages in the imperative: "Add login page", "Fix task deletion bug", not "Added" or "Fixed".
 - Do **not** force-push to `main`/`master` under any circumstances.
 - Do **not** skip pre-commit hooks (`--no-verify`).
-- If the repository has not been initialized yet, run `git init` first, then set the remote:
-  ```bash
-  git init
-  git remote add origin <GitHub repository URL>
-  git push -u origin main
-  ```
 
 ### Branch Strategy
 
 - `main` — production-ready code only.
 - Feature work goes on short-lived branches: `feature/<topic>`.
-- Merge to `main` via Pull Request; do not push directly unless the branch has no protection rules and the user explicitly says so.
+- Merge to `main` via Pull Request; do not push directly unless explicitly told to.
 
 ### Commit Message Format
 
@@ -53,9 +55,9 @@ Types: `feat`, `fix`, `refactor`, `style`, `test`, `docs`, `chore`.
 ## Development Guidelines
 
 - Prefer editing existing files over creating new ones.
-- Do not add error handling, fallbacks, or abstractions beyond what the task requires.
+- Do not add error handling or abstractions beyond what the task requires.
 - Do not add comments unless the **why** is non-obvious.
-- Run tests (if they exist) before committing.
+- Run `npm run dev` to verify UI changes before committing.
 
 ---
 
@@ -64,3 +66,4 @@ Types: `feat`, `fix`, `refactor`, `style`, `test`, `docs`, `chore`.
 - Platform: Windows 11
 - Shell: bash (Unix syntax in commands)
 - Working directory: `c:\claudeAI\task-board`
+- Remote: https://github.com/reabuzzinc/task-board.git
