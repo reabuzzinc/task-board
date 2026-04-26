@@ -13,7 +13,46 @@ Vite + React で構築したタスクボードアプリケーション。
 
 **技術スタック:** React 19, Vite, CSS（UIライブラリなし）
 
-**公開URL:** https://reabuzzinc.github.io/task-board/
+---
+
+## デプロイ先
+
+**GitHub Pages:** https://reabuzzinc.github.io/task-board/
+
+---
+
+## 技術スタック
+
+| 種別 | 採用技術 |
+|------|----------|
+| UIフレームワーク | React 19 |
+| ビルドツール | Vite 8 |
+| スタイリング | Plain CSS（`App.css` / `index.css`） |
+| 状態管理 | React `useState` / `useEffect`（ライブラリなし） |
+| 永続化 | `localStorage` |
+| デプロイ | GitHub Pages（`gh-pages` パッケージ） |
+
+---
+
+## コンポーネント・命名規約
+
+### コンポーネント
+- コンポーネントファイルは **PascalCase**（例: `App.jsx`, `TaskItem.jsx`）
+- コンポーネント関数も **PascalCase** で export（例: `export default function App()`）
+- 1ファイル1コンポーネントを基本とする
+
+### 関数・変数
+- イベントハンドラは **動詞 + 対象** の形式（例: `addTask`, `toggleTask`, `deleteTask`）
+- キーボードイベントは `handle` プレフィックス（例: `handleKeyDown`）
+- 状態変数は内容を表す名詞（例: `tasks`, `input`）
+- セッター関数は React 慣例の `set` プレフィックス（例: `setTasks`, `setInput`）
+
+### CSS クラス名
+- **kebab-case**（例: `.task-item`, `.task-list`, `.input-row`, `.delete-btn`）
+- 状態を表す修飾クラスは短い形容詞（例: `.done`）
+
+### 定数
+- モジュールスコープの定数は **UPPER_SNAKE_CASE**（例: `STORAGE_KEY`）
 
 ---
 
@@ -78,3 +117,4 @@ npm run deploy
 - シェル: bash（コマンドは Unix 構文で記述）
 - 作業ディレクトリ: `c:\claudeAI\task-board`
 - リモートリポジトリ: https://github.com/reabuzzinc/task-board.git
+
